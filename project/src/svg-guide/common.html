@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG sprite preview Guide | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ffd174;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}
+		span{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block}</style>
+
+<!--
+
+Sprite CSS
+====================================================================================================
+This is an all-in-one inline version of the CSS necessary to use the SVG sprite.
+
+-->
+
+<style type="text/css">
+.ic_heart_zzim {
+	background: url("../../dist/css/svg/common.svg") calc(0px - 2px) calc(-28px - 2px) no-repeat;
+	width: 18px;
+	height: 17px;
+}
+.ic_history {
+	background: url("../../dist/css/svg/common.svg") calc(-28px - 2px) calc(0px - 2px) no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.ic_home {
+	background: url("../../dist/css/svg/common.svg") calc(0px - 2px) calc(0px - 2px) no-repeat;
+	width: 24px;
+	height: 24px;
+}
+</style>
+<!--
+====================================================================================================
+-->
+
+</head>
+
+<body>
+	<header>
+		<h1>SVG CSS sprite preview</h1>
+		<p>This preview features the generated SVG file as a conventional CSS sprite. The shapes are displayed as background images of several <code>&lt;i&gt;</code> elements.</p>
+	</header>
+	<section>
+
+		<!--
+
+Conventional CSS sprite
+====================================================================================================
+This technique uses CSS classes to display portions of the sprite as background image of
+appropriately sized elements.
+
+-->
+
+		<ul>
+				<li title="ic_heart_zzim">
+					<div class="icon-box">
+
+						<!-- ic_heart_zzim -->
+						<span class="ic_heart_zzim"></span>
+
+					</div>
+					<h2>ic_heart_zzim</h2>
+				</li>
+				<li title="ic_history">
+					<div class="icon-box">
+
+						<!-- ic_history -->
+						<span class="ic_history"></span>
+
+					</div>
+					<h2>ic_history</h2>
+				</li>
+				<li title="ic_home">
+					<div class="icon-box">
+
+						<!-- ic_home -->
+						<span class="ic_home"></span>
+
+					</div>
+					<h2>ic_home</h2>
+				</li>
+		</ul>
+
+		<!--
+====================================================================================================
+-->
+
+	</section>
+	<footer>
+		<p>Generated at Wed, 20 Jul 2022 09:04:41 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+	</footer>
+</body>
+
+</html>

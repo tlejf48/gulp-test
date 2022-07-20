@@ -1,0 +1,126 @@
+//= Reset style
+html{
+	height:100vh;
+	-webkit-tap-highlight-color:transparent;
+	@extend %safe-area-padding;
+}
+
+body{
+	height:100vh;
+	font-family:$font-family-base;
+	font-size:$font-size-base;
+	line-height:$line-height-base;
+	color:$text-color;
+	background-color:$bg-color2;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%; /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+	word-break:break-all;
+	-webkit-animation:bugfix infinite 1s; //안드로이드 라디오 checked~안되는 버그
+	/* -webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale; */
+}
+
+body,dl,dd,ul,ol,menu,h1,h2,h3,h4,h5,h6,pre,form,fieldset,figure,legend,p,blockquote,optgroup{
+	margin:0;
+	padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:inherit;
+	font-size:inherit;
+}
+
+fieldset{
+	border:0;
+}
+
+img{
+	width:100%;
+	border:0;
+	border-radius:inherit;
+	vertical-align:top;
+}
+
+dl,ul,ol,menu,li{
+	list-style:none;
+}
+
+blockquote, q{
+	quotes:none;
+}
+
+blockquote:before, blockquote:after, q:before,q:after{
+	content:'';
+	content:none;
+}
+
+address,cite,code,dfn,em,var{
+	font-style:inherit;
+	font-weight:inherit;
+}
+
+caption{
+	width:0;
+	height:0;
+	font-size:0;
+	overflow:hidden;
+}
+hr,legend{
+	display:none;
+}
+a,button{
+	cursor:pointer;
+	color:inherit;
+	text-decoration:none;
+	box-sizing:border-box;
+}
+button{
+	touch-action: manipulation;
+}
+button,input,select,textarea{
+	margin:0;
+	padding:0;
+	border:0;
+	border-radius:0;
+	background:none;
+	font:inherit;
+	@include appearance(none);
+	outline:none;
+}
+input,optgroup,select,textarea{
+	color:inherit;
+	line-height:inherit;
+	box-sizing:border-box;
+}
+
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+button[disabled]{
+	cursor:default;
+}
+input[type=search]::-webkit-search-cancel-button{
+	@include appearance(none);
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button{
+	@include appearance(none);
+	margin:0;
+}
+textarea{
+	@include box-shadow(none);
+	&::-moz-focus-inner{
+		padding:0;
+		border:0;
+	}
+}
+
+@-webkit-keyframes bugfix{
+	from{
+		padding:0;
+	}
+
+	to{
+		padding:0;
+	}
+}

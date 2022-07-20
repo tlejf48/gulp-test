@@ -1,0 +1,16 @@
+{{#time}}$time:{{{time}}};{{/time}}
+{{#shapes}}
+{{#selector.shape}}${{#classname}}{{expression}}{{/classname}}{{^last}},{{/last}}{{/selector.shape}}:(
+	name:'{{#selector.shape}}{{#classname}}{{expression}}{{/classname}}{{/selector.shape}}',
+	width:{{width.inner}}px,
+	height:{{height.inner}}px,
+	x:({{position.absolute.x}}px - ({{width.outer}}px - {{width.inner}}px)/2),
+	y:({{position.absolute.y}}px - ({{height.outer}}px - {{height.inner}}px)/2),
+	svg:'{{#svgcode}}{{{svg}}}{{/svgcode}}'
+);
+{{/shapes}}
+
+$svgsprite-shapes:(
+{{#shapes}}
+	{{#selector.shape}}${{#classname}}{{expression}}{{/classname}}{{/selector.shape}},
+{{/shapes}});
